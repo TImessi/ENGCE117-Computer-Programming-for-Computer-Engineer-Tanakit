@@ -1,19 +1,24 @@
-#include <iostream>
-#include <string>
-using namespace std ;
+#include <stdio.h>
+#include <string.h>
+
+char fname[ 20 ] ,lname[ 20 ] ;
 
 int main() {
-    // ประกาศตัวแปรเพื่อเก็บชื่อ
-    string firstName, lastName ;
+
+    printf( "First Name: " ) ;
+    scanf( "%s",fname ) ;
+    printf( "Last Name: " ) ;
+    scanf( "%s",lname ) ;
     
-    // รับชื่อจากผู้ใช้
-    cout << "First Name: " ;
-    cin >> firstName ;
-    cout << "Last Name: " ;
-    cin >> lastName ;
-    
-    // แสดงผลลัพธ์
-    cout << firstName << " " << lastName << "s TC, RMUTL, Chiang Mai, Thailand" << endl ;
-    
+    int len = strlen( fname ) ;
+
+    if( fname[ len - 1 ] == 'c' || fname[ len - 1 ] == 'C' ) {
+        fname[ len - 1 ] = 'C' + 1 ;
+    }//end if
+
+    printf( "%s %ss TC, RMUTL, Chiang Mai, Thailand" ,fname ,lname ) ;
+        
+
+
     return 0 ;
-}
+} //end function
