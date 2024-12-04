@@ -6,7 +6,7 @@ char* reverse( char str1[] ) ;
 int main() {
 
     char text[ 50 ] = " I Love You " ;
-    fgets( text ,sizeof( text ) ,stdin ) ;
+    fgets( text, sizeof( text ), stdin ) ;
     char *out ;
     out = reverse( text ) ;
 

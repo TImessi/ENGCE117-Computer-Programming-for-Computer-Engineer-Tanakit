@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void explode( char str1[] ,char splitter[] ,char str2[][10] ,int *count ) ;
+void explode( char str1[], char splitter[], char str2[][ 10 ], int *count ) ;
 
 int main() {
     char out[ 20 ][ 10 ] ;
@@ -9,19 +9,19 @@ int main() {
     char splitter[] = "/-:, " ;
 
     char s1[ 50 ] ;
-    fgets( s1 ,sizeof( s1 ) ,stdin ) ;
+    fgets( s1, sizeof( s1 ), stdin ) ;
 
-    explode( s1 ,splitter ,out ,&num ) ;
+    explode( s1, splitter, out, &num ) ;
 
     if ( num == 0 ) {
-        printf( "count = %d\n" ,num ) ;
+        printf( "count = %d\n", num ) ;
     }//end if
     else {
         
         for ( int i = 0 ; i < num ; i++ ) {
-            printf( "str2[%d] = \"%s\"\n" ,i ,out[ i ] ) ;
+            printf( "str2[%d] = \"%s\"\n", i, out[ i ] ) ;
         }//end for
-        printf( "count = %d\n" ,num ) ;
+        printf( "count = %d\n", num ) ;
     }//end else
 
     return 0 ;

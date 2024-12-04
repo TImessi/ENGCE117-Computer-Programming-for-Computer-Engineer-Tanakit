@@ -1,23 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *GetMatrix( int *row ,int *col ) ;
+int *GetMatrix( int *row, int *col ) ;
 
 int main() {
-    int *data ,m ,n ;
-    data = GetMatrix( &m ,&n ) ;
+    int *data, m, n ;
+    data = GetMatrix( &m, &n ) ;
 
 
     printf( "\n" ) ;
     if( data == NULL && ( m == 0 && n == 0 ) ) { //case m = 0 , n = 0
-        printf( "Enter number of rows and columns: %d %d" ,m ,n ) ;
+        printf( "Enter number of rows and columns: %d %d", m, n ) ;
     }//end if
     else if( data != NULL ) {
-        printf( "Enter number of rows and columns: %d %d\n" ,m ,n ) ;
+        printf( "Enter number of rows and columns: %d %d\n", m, n ) ;
         printf( "Enter matrix elements:\n" ) ;
         for( int i = 0 ; i < m ; i++ ) {
             for( int j = 0 ; j < n ; j++ ) {
-                printf( "%d " ,data[ i *n + j ] ) ;
+                printf( "%d ", data[ i *n + j ] ) ;
             }//end for
 
             printf( "\n" ) ;

@@ -1,38 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
-void GetMatrix( int **value ,int *row ,int *col ) ;
+void GetMatrix( int **value, int *row, int *col ) ;
 
 int main() {
-    int *data ,m ,n ;
-    GetMatrix( &data ,&m ,&n ) ;
+    int *data, m, n ;
+    GetMatrix( &data, &m, &n ) ;
 
 
     
     if( m > 1 && n == 1 || m == 1 && n > 1 ) {  //case size n = 1 or m = 1 will print Matrix: only
         printf( "Matrix:\n" );
-        for ( int i = 0; i < m ; i++ ) {
+        for ( int i = 0 ; i < m ; i++ ) {
             for ( int j = 0 ; j < n ; j++ ) {
-                printf( "%d ", data[ i * n + j ] ) ;
+                printf( "%d " , data[ i * n + j ] ) ;
             }//end for
             printf( "\n" ) ;
         }//end for
 
     }//end if
     else if( m * n == 6 && data[ 0 ] < 21 ) {   //case 3x2 size  print Matrix(m*n):
-        printf( "Matrix (%dx%d):\n" ,m ,n ) ;
+        printf( "Matrix (%dx%d):\n", m, n ) ;
         for ( int i = 0 ; i < m ; i++ ) {
             for ( int j = 0 ; j < n ; j++ ) {
-                printf( "%d " ,data[ i * n + j ] ) ;
+                printf( "%d ", data[ i * n + j ] ) ;
 
             }//end for
             printf( "\n" ) ;
         }//end for
     }//end else if
     else if( m * n == 6 && data[ 0 ] > 20 ) {
-        printf( "Matrix:\n" ,m ,n ) ;            //case 3x2 size  print Matrix(m*n) but data > 20
+        printf( "Matrix:\n", m, n ) ;            //case 3x2 size  print Matrix(m*n) but data > 20
         for ( int i = 0 ; i < m ; i++ ) {
             for ( int j = 0 ; j < n ; j++ ) {
-                printf( "%d " ,data[ i * n + j ] ) ;
+                printf( "%d ", data[ i * n + j ] ) ;
             }//end for
             printf( "\n" ) ;
         }//end for
