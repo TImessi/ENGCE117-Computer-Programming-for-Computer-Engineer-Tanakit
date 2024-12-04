@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-void GetMatrix( int **value, int *row, int *col ) ;
+void GetMatrix( int **value ,int *row ,int *col ) ;
 
 int main() {
     int *data ,m ,n ;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int GetSet( int [], int size ) ; 
+int GetSet( int [] ,int size ) ; 
 
 int main() {
     int *data ,num ;
@@ -19,7 +19,7 @@ int main() {
         printf( "Number of elements: %d\n" ,num ) ;
 
         for( int i = 0 ; i < num ; i++ ) {
-            printf( "%d " , data[ i ] ) ;
+            printf( "%d " ,data[ i ] ) ;
 
         }//end for
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void GetSet( int [], int * ) ;
+void GetSet( int [] ,int * ) ;
 
 int main() {
 
@@ -16,7 +16,7 @@ int main() {
 }//end function
 
 
-void GetSet( int data[], int *num ) {
+void GetSet( int data[] ,int *num ) {
     for( int i = 0 ; i < *num ; i++ ){
         scanf( "%d" ,&data[ i ] ) ;
         

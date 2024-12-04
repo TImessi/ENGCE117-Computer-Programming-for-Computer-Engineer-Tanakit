@@ -52,7 +52,7 @@ void explode( char str1[] ,char splitter[] ,char str2[][20] ,int *count ) {
         }//end for
 
 
-        if ( multiSplitter && i + 1 < lenOfStr1 && strchr( splitter, str1[ i + 1 ] ) ) { // multi spliiter set pos to next index
+        if ( multiSplitter && i + 1 < lenOfStr1 && strchr( splitter ,str1[ i + 1 ] ) ) { // multi spliiter set pos to next index
             start = i + 2 ; 
         }//end if
     }//end for
@@ -61,7 +61,7 @@ void explode( char str1[] ,char splitter[] ,char str2[][20] ,int *count ) {
     if ( lenOfStr1 - start > 1 ) {
         strncpy( str2 [ currPosDest ] ,&str1[ start ] ,lenOfStr1 - start ) ;
         str2[ currPosDest ][ lenOfStr1 - start ] = '\0' ;
-        str2[ currPosDest ][ strcspn ( str2 [ currPosDest ] , "\n" ) ] = '\0' ;
+        str2[ currPosDest ][ strcspn ( str2 [ currPosDest ] ,"\n" ) ] = '\0' ;
         currPosDest++ ;
     }//end if
     *count = currPosDest ;

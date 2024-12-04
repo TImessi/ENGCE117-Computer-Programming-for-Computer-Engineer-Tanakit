@@ -29,23 +29,23 @@ int main() {
 
 
 
-void explode( char str1[], char splitter[], char str2[][10], int *count ) {
+void explode( char str1[] ,char splitter[] ,char str2[][10] ,int *count ) {
     int lenOfStr1 = strlen( str1 ) ;
     if ( lenOfStr1 == 1 ) {
         *count = 0 ;
-        return;
+        return ;
     }//end if
-    int i, j, currPosDest = 0, start = 0 ;
+    int i ,j ,currPosDest = 0 ,start = 0 ;
 
-    for (i = 0; i < lenOfStr1; i++ ) {
+    for ( i = 0 ; i < lenOfStr1 ; i++ ) {
         int multiSplitter = 0 ;
-        for (j = 0; splitter[ j ] != '\0'; j++ ) {
+        for (j = 0 ; splitter[ j ] != '\0' ; j++ ) {
             if ( str1[ i ] == splitter[ j ] ) {           // if splitter is found in str1
                 multiSplitter = 1 ;
                 if ( i - start > 0 ) {                
-                    strncpy( str2[ currPosDest ], &str1[ start ], i - start ) ;        // copy str1 to desc this is str2
+                    strncpy( str2[ currPosDest ] ,&str1[ start ] ,i - start ) ;        // copy str1 to desc this is str2
                     str2[ currPosDest ][ i - start ] = '\0' ;                        // copy str1 to desc this is str2
-                    str2[ currPosDest ][strcspn(str2[ currPosDest ], "\n" ) ] = '\0' ; //ensure next index after charactor  
+                    str2[ currPosDest ][strcspn( str2[ currPosDest ] ,"\n" ) ] = '\0' ; //ensure next index after charactor  
                     currPosDest++ ;                                              //add pos for keep next text
                 }
                 start = i + 1 ;
@@ -54,16 +54,16 @@ void explode( char str1[], char splitter[], char str2[][10], int *count ) {
         }//end for
 
 
-        if ( multiSplitter && i + 1 < lenOfStr1 && strchr( splitter, str1[ i + 1 ]) ) { // multi spliiter set pos to next index
+        if ( multiSplitter && i + 1 < lenOfStr1 && strchr( splitter ,str1[ i + 1 ] ) ) { // multi spliiter set pos to next index
             start = i + 2 ; 
         }//end if
     }//end for
 
     
     if ( lenOfStr1 - start > 1 ) {
-        strncpy( str2[ currPosDest ], &str1[ start ], lenOfStr1 - start ) ;
+        strncpy( str2[ currPosDest ] ,&str1[ start ] ,lenOfStr1 - start ) ;
         str2[ currPosDest ][ lenOfStr1 - start ] = '\0' ;
-        str2[ currPosDest ][ strcspn( str2[currPosDest ], "\n" ) ] = '\0' ;
+        str2[ currPosDest ][ strcspn( str2[ currPosDest ] ,"\n" ) ] = '\0' ;
         currPosDest++ ;
     }//end if
     *count = currPosDest ;
