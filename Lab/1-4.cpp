@@ -4,22 +4,22 @@
 int GetSet( int [], int size ) ; 
 
 int main() {
-    int *data, num ;
+    int *data ,num ;
     printf( "Enter the number of elements: " ) ;
-    scanf( "%d", &num ) ;
+    scanf( "%d" ,&num ) ;
     data = ( int* )malloc( num * sizeof( int ) ) ;
-    num = GetSet( data, num ) ; 
+    num = GetSet( data ,num ) ; 
 
 
-    if(num == -1){
+    if( num == -1 ){
         printf( "Error\n" );
 
     }else{
         printf( "\n" ) ;
-        printf( "Number of elements: %d\n", num ) ;
+        printf( "Number of elements: %d\n" ,num ) ;
 
         for( int i = 0 ; i < num ; i++ ) {
-            printf( "%d ", data[ i ] ) ;
+            printf( "%d " , data[ i ] ) ;
 
         }//end for
 

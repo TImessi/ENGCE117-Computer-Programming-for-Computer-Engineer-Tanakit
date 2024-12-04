@@ -6,11 +6,11 @@ char* reverse( char str1[] ) ;
 int main() {
 
     char text[ 50 ] = " I Love You " ;
-    fgets( text, sizeof( text ), stdin ) ;
+    fgets( text ,sizeof( text ) ,stdin ) ;
     char *out ;
     out = reverse( text ) ;
 
-    printf("%s", out);
+    printf( "%s" , out );
 
 }//end function
 
@@ -27,5 +27,5 @@ char* reverse( char str1[] ) {
     }//end for
 
 
-    return str1;
+    return str1 ;
 }//end function reverse()
