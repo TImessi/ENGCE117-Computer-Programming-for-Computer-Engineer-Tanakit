@@ -3,7 +3,7 @@
 struct student {
     char name[ 50 ] ;
     int age ;
-} ;
+} ; //end struct
 
 struct student ( *GetStudent( int *room ) ) [ 10 ] {
     static struct student rooms[ 10 ][ 10 ] ; 
@@ -15,10 +15,10 @@ struct student ( *GetStudent( int *room ) ) [ 10 ] {
         scanf( "%s" , rooms[ *room - 1 ][ i ].name ) ;
         printf( ", Age: " ) ;
         scanf( "%d" , rooms[ *room - 1 ][ i ].age ) ;
-    }
+    } //end for
 
     return &rooms[ *room - 1 ] ; 
-}
+} //end GetStudent
 
 int main() {
     struct student ( *children )[ 10 ] ;
@@ -32,4 +32,4 @@ int main() {
     }
 
     return 0 ;
-}
+} //end main
