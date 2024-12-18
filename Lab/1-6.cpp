@@ -9,15 +9,15 @@ int main() {
 
 
     printf( "\n" ) ;
-    if( data == NULL && ( m == 0 && n == 0 ) ) { //case m = 0 , n = 0
-        printf( "Enter number of rows and columns: %d %d", m, n ) ;
+    if( data == NULL && ( m == 0 && n == 0 ) ) { 
+        printf( "Enter number of rows and columns: %d %d" , m, n ) ;
     }//end if
     else if( data != NULL ) {
-        printf( "Enter number of rows and columns: %d %d\n", m, n ) ;
+        printf( "Enter number of rows and columns: %d %d\n" , m, n ) ;
         printf( "Enter matrix elements:\n" ) ;
         for( int i = 0 ; i < m ; i++ ) {
             for( int j = 0 ; j < n ; j++ ) {
-                printf( "%d ", data[ i *n + j ] ) ;
+                printf( "%d " , data[ i *n + j ] ) ;
             }//end for
 
             printf( "\n" ) ;
@@ -35,14 +35,14 @@ int main() {
 
 
 int *GetMatrix( int *row, int *col ) {
-    scanf( "%d %d", row, col ) ;
+    scanf( "%d %d" , row, col ) ;
     if( *row == 0 && *col == 0 ) {
         return NULL ;
     }//end if
     int *data = ( int* )malloc( ( *row) * ( *col ) * sizeof( int ) ) ;
-    for ( int i = 0; i < *row; i++ ) {
-        for ( int j = 0; j < *col; j++ ) {
-            scanf( "%d", &data[i * *col + j] ) ;
+    for ( int i = 0 ; i < *row; i++ ) {
+        for ( int j = 0 ; j < *col; j++ ) {
+            scanf( "%d", &data[ i * *col + j ] ) ;
             char c = getchar() ;
             if ( c == '\n' &&  i == *row - 1 && j == *col - 2 ) {   //case user input last row?
                 printf( "Error: Invalid matrix input" ) ;
