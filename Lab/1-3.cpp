@@ -7,10 +7,10 @@ int main() {
     data = GetSet( &num ) ;
 
     printf( "\n" ) ;
-    printf( "Number of elements: %d\n", num ) ;
+    printf( "Number of elements: %d\n" , num ) ;
 
     for( int i = 0 ; i < num ; i++ ) {
-        printf( "%d ", data[ i ] ) ;
+        printf( "%d " , data[ i ] ) ;
 
     }//endfor
 
