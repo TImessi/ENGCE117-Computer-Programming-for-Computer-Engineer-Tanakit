@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int *GetSet( int * ) ;
+int* GetSet( int * ) ;
 
 int main() {
     int *data, num ;

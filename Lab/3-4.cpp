@@ -7,7 +7,7 @@ struct student {
 } ; //end struct
 
 
-void GetStudent( struct student child[][ 10 ] ,int *room) {
+void GetStudent( struct student child[][ 10 ] , int *room ) {
 
     scanf( "%d" , room ) ;
     for ( int i = 0 ; i < *room ; i++ ) {
